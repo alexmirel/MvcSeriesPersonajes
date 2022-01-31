@@ -1,0 +1,24 @@
+﻿@model List<Serie>
+
+@{ 
+    ViewData["Title"] = "Series";
+}
+
+<h1>Series</h1>
+
+<hr />
+
+@foreach (Serie serie in Model)
+{
+    <div class="row">
+        <div class="col-3">
+            <p><b>Nombre:</b> @serie.Nombre</p>
+            <p><b>Año:</b> @serie.Anyo</p>
+            <p><b>Puntuación:</b> @serie.Puntuacion</p>
+        </div>
+        <div class="col-3">
+            <p><img src="@serie.Imagen" style="width:100px; height:100px" /></p>
+        </div>
+    </div>
+    <br />
+}
